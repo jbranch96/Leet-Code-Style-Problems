@@ -51,7 +51,7 @@ class Solution(object):
             target_element: int = target - num
             
             if target_element in nums[idx_offset:]:
-                target_idx = nums[idx_offset:].index(target_element) + (idx_offset)
+                target_idx: int = nums[idx_offset:].index(target_element) + (idx_offset)
                 output_list.append(i)
                 output_list.append(target_idx)
                 return output_list
