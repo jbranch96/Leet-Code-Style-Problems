@@ -47,12 +47,13 @@ class Solution(object):
         if len(nums) < 2: return []
         
         for i, num in enumerate(nums):
+            idx_offset: int = (i + 1)
             target_element: int = target - num
-            idx_offset: int = i+1
-
+            
             if target_element in nums[idx_offset:]:
+                target_idx = nums[idx_offset:].index(target_element) + (idx_offset)
                 output_list.append(i)
-                output_list.append(nums[idx_offset:].index(target_element)+(idx_offset))
+                output_list.append(target_idx)
                 return output_list
 
 # Insert desired test cases below
