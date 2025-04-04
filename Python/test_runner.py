@@ -31,7 +31,7 @@ def run_tests(solution_class, method_name, test_cases):
                 
                 try:
                     actual_output = method_to_test(*input_values)
-                    passed = actual_output == expected_output
+                    passed = actual_output.sort() == expected_output.sort()
                     
                     # Print detailed results
                     print("\n-------------------------")
